@@ -54,6 +54,9 @@ namespace ChatPager.Actions
                     SubChatMessage = SUB_CHAT_DEFAULT_MESSAGE,
                     SubFlashColor = SUB_FLASH_DEFAULT_COLOR,
                     SubFlashMessage = SUB_FLASH_DEFAULT_MESSAGE,
+                    GiftSubChatMessage = GIFT_SUB_CHAT_DEFAULT_MESSAGE,
+                    GiftSubFlashColor = GIFT_SUB_FLASH_DEFAULT_COLOR,
+                    GiftSubChatMessage = GIFT_SUB_DEFAULT_MESSAGE,
                     PointsChatMessage = POINTS_CHAT_DEFAULT_MESSAGE,
                     PointsFlashColor = POINTS_FLASH_DEFAULT_COLOR,
                     PointsFlashMessage = POINTS_FLASH_DEFAULT_MESSAGE,
@@ -146,6 +149,15 @@ namespace ChatPager.Actions
 
             [JsonProperty(PropertyName = "subChatMessage")]
             public string SubChatMessage { get; set; }
+            
+            [JsonProperty(PropertyName = "GiftsubFlashColor")]
+            public string SubFlashColor { get; set; }
+            
+            [JsonProperty(PropertyName = "GiftsubFlashMessage")]
+            public string SubFlashMessage { get; set; }
+            
+            [JsonProperty(PropertyName = "GiftsubChatMessage")]
+            public string SubChatMessage { get; set; }
 
             [JsonProperty(PropertyName = "pointsFlashColor")]
             public string PointsFlashColor { get; set; }
@@ -223,6 +235,9 @@ namespace ChatPager.Actions
         private const string SUB_CHAT_DEFAULT_MESSAGE = "New Sub by: @{DISPLAYNAME} for {MONTHS} months!!! {MESSAGE}";
         private const string SUB_FLASH_DEFAULT_COLOR = "#FF0000";
         private const string SUB_FLASH_DEFAULT_MESSAGE = "Sub: {DISPLAYNAME}";
+        private const string GIFT_SUB_CHAT_DEFAULT_MESSAGE = "New Gifted Sub by: @{DISPLAYNAME} for {MONTHS} months!!! {MESSAGE}";
+        private const string GIFT_SUB_FLASH_DEFAULT_COLOR = "#FF00FF";
+        private const string GIFT_SUB_FLASH_DEFAULT_MESSAGE = "Gift Sub: {DISPLAYNAME}";
         private const string POINTS_CHAT_DEFAULT_MESSAGE = "{DISPLAYNAME} redeemed {TITLE} for {POINTS} points. {MESSAGE}";
         private const string POINTS_FLASH_DEFAULT_COLOR = "#00FF00";
         private const string POINTS_FLASH_DEFAULT_MESSAGE = "Points: {DISPLAYNAME} - {TITLE}";
@@ -378,6 +393,9 @@ namespace ChatPager.Actions
                 Settings.SubChatMessage = global.SubChatMessage;
                 Settings.SubFlashColor = global.SubFlashColor;
                 Settings.SubFlashMessage = global.SubFlashMessage;
+                Settings.GiftSubChatMessage = global.GiftSubChatMessage;
+                Settings.GiftSubFlashColor = global.GiftSubFlashColor;
+                Settings.GiftSubFlashMessage = global.GiftSubFlashMessage;
                 Settings.PointsChatMessage = global.PointsChatMessage;
                 Settings.PointsFlashColor = global.PointsFlashColor;
                 Settings.PointsFlashMessage = global.PointsFlashMessage;
@@ -479,6 +497,9 @@ namespace ChatPager.Actions
             global.SubChatMessage = Settings.SubChatMessage;
             global.SubFlashColor = Settings.SubFlashColor;
             global.SubFlashMessage = Settings.SubFlashMessage;
+            global.GiftSubChatMessage = Settings.GiftSubChatMessage;
+            global.GiftSubFlashColor = Settings.GiftSubFlashColor;
+            global.GiftSubFlashMessage = Settings.GiftSubFlashMessage;
             global.PointsChatMessage = Settings.PointsChatMessage;
             global.PointsFlashColor = Settings.PointsFlashColor;
             global.PointsFlashMessage = Settings.PointsFlashMessage;
@@ -717,6 +738,9 @@ namespace ChatPager.Actions
             Settings.SubChatMessage = SUB_CHAT_DEFAULT_MESSAGE;
             Settings.SubFlashColor = SUB_FLASH_DEFAULT_COLOR;
             Settings.SubFlashMessage = SUB_FLASH_DEFAULT_MESSAGE;
+            Settings.GiftSubChatMessage = GIFT_SUB_CHAT_DEFAULT_MESSAGE;
+            Settings.GiftSubFlashColor = GIFT_SUB_FLASH_DEFAULT_COLOR;
+            Settings.GiftSubFlashMessage = GIFT_SUB_FLASH_DEFAULT_MESSAGE;
             Settings.PointsChatMessage = POINTS_CHAT_DEFAULT_MESSAGE;
             Settings.PointsFlashColor = POINTS_FLASH_DEFAULT_COLOR;
             Settings.PointsFlashMessage = POINTS_FLASH_DEFAULT_MESSAGE;
